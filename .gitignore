@@ -1,0 +1,30 @@
+# dependencies
+/node_modules
+
+# build output
+/dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# design-sync
+/.ds-sync/
+/ds-bundle/
+/.design-sync/.cache/
+/.design-sync/learnings/
+/.design-sync/node_modules
+
+# gallery (dev-only, has its own gitignore if it needs one)
+/gallery/node_modules

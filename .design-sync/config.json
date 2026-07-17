@@ -1,0 +1,12 @@
+{
+  "projectId": "bd06a748-a124-4341-95f4-0b79460ed280",
+  "shape": "package",
+  "pkg": "@portfolio/ui",
+  "cssEntry": "dist/index.css",
+  "docsDir": "docs",
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "Nav": { "cardMode": "column" },
+    "Footer": { "cardMode": "column" }
+  }
+}

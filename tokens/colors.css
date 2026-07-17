@@ -1,0 +1,67 @@
+:root {
+  /* base neutrals */
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-50: #f7f7f5;
+  --gray-100: #ededea;
+  --gray-200: #dcdcd6;
+  --gray-300: #c2c2ba;
+  --gray-400: #9c9c92;
+  --gray-500: #78786e;
+  --gray-600: #58584f;
+  --gray-700: #3d3d36;
+  --gray-800: #262622;
+  --gray-900: #161613;
+
+  /* primary accent — signal orange */
+  --orange-50: #fff1ea;
+  --orange-100: #ffdcc7;
+  --orange-300: #ff8a4d;
+  --orange-500: #ff4d00;
+  --orange-600: #e64400;
+  --orange-700: #b33500;
+
+  /* secondary accent — circuit blue */
+  --blue-50: #eaf1ff;
+  --blue-100: #c6dcff;
+  --blue-300: #5c96ff;
+  --blue-500: #0052ff;
+  --blue-600: #0041cc;
+  --blue-700: #003399;
+
+  /* status */
+  --success-500: #1a7f37;
+  --danger-500: #d1242f;
+  --warning-500: #9a6700;
+
+  /* semantic aliases */
+  --surface-page: var(--white);
+  --surface-raised: var(--white);
+  --surface-sunken: var(--gray-50);
+  --surface-inverse: var(--black);
+
+  --text-primary: var(--black);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-400);
+  --text-inverse: var(--white);
+  --text-on-accent: var(--white);
+
+  --border-default: var(--gray-200);
+  --border-strong: var(--black);
+  --border-inverse: var(--gray-700);
+
+  --accent-primary: var(--orange-500);
+  --accent-primary-hover: var(--orange-600);
+  --accent-primary-active: var(--orange-700);
+  --accent-primary-subtle: var(--orange-50);
+
+  --accent-secondary: var(--blue-500);
+  --accent-secondary-hover: var(--blue-600);
+  --accent-secondary-active: var(--blue-700);
+  --accent-secondary-subtle: var(--blue-50);
+
+  --focus-ring: var(--orange-500);
+  --success: var(--success-500);
+  --danger: var(--danger-500);
+  --warning: var(--warning-500);
+}
