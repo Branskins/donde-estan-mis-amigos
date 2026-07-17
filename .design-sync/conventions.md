@@ -1,3 +1,17 @@
+## Foundations — read these before making any color, type, or icon decision
+
+`ColorPalette`, `TypeScale`, and `Iconography` are not layout components — they're the rendered, authoritative source for this system's colors, type scale, and icon set. Before picking a color, font size, or icon anywhere, render or read these rather than guessing:
+
+```tsx
+import { ColorPalette, TypeScale, Iconography } from "@portfolio/ui";
+```
+
+- `ColorPalette` — the full neutral ramp, primary (orange) and secondary (blue) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
+- `TypeScale` — display through small, plus the `// UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
+- `Iconography` — the working Lucide icon set (2px stroke, `currentColor`, outline only). Pull new icons from `lucide-react` at the same stroke width shown here rather than mixing icon styles.
+
+All three take no props — they always render the current token/icon set live, so they can't drift out of date the way a written color/type reference can.
+
 ## Setup
 
 No provider or wrapper is required — every component works standalone. Import components from `@portfolio/ui` and import the stylesheet once, at the app root (it carries both the design tokens and every component's CSS):
@@ -20,8 +34,11 @@ This is not a Tailwind-style utility system and components take no `style`/theme
 | ProjectCard | `ds-card`, `ds-card__head`, `ds-card__index`, `ds-card__title`, `ds-card__desc`, `ds-card__tags`, `ds-card__links`, `ds-card__link` |
 | Nav | `ds-nav`, `ds-nav__inner`, `ds-nav__mark`, `ds-nav__links`, `ds-nav__link`, `ds-nav__link--active`, `ds-nav__index` |
 | Footer | `ds-footer`, `ds-footer__inner`, `ds-footer__meta`, `ds-footer__links`, `ds-footer__link` |
+| ColorPalette | `ds-palette`, `ds-palette__label`, `ds-swatch-row`, `ds-swatch`, `ds-token-grid`, `ds-token-cell`, `ds-token-chip`, `ds-token-name` |
+| TypeScale | `ds-typescale`, `ds-typescale__row`, `ds-typescale__tag`, `ds-typescale__labels`, `ds-label`, `ds-label--accent` |
+| Iconography | `ds-icons`, `ds-icons__grid`, `ds-icons__cell` |
 
-For layout/glue markup you write yourself (page wrappers, grids — anything that isn't one of the 6 components above), don't invent new colors, spacing, or type sizes. Use the same CSS custom properties the components use, directly:
+For layout/glue markup you write yourself (page wrappers, grids — anything that isn't one of the components above), don't invent new colors, spacing, or type sizes. Use the same CSS custom properties the components use, directly:
 
 - Color: `var(--text-primary)`, `var(--text-secondary)`, `var(--text-muted)`, `var(--surface-page)`, `var(--surface-sunken)`, `var(--surface-inverse)`, `var(--border-default)`, `var(--border-strong)`, `var(--accent-primary)` (signal orange), `var(--accent-secondary)` (circuit blue).
 - Spacing (4px scale): `var(--space-1)` through `var(--space-24)`.

@@ -13,3 +13,7 @@ export type { NavItem, NavProps, NavLinkProps } from "./nav";
 
 export { Footer } from "./footer";
 export type { FooterProps } from "./footer";
+
+export { ColorPalette } from "./color-palette";
+export { TypeScale } from "./type-scale";
+export { Iconography } from "./iconography";

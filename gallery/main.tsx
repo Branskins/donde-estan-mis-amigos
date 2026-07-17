@@ -1,6 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Badge, Button, Footer, LinkButton, Nav, ProjectCard } from "../src";
+import {
+  Badge,
+  Button,
+  ColorPalette,
+  Footer,
+  Iconography,
+  LinkButton,
+  Nav,
+  ProjectCard,
+  TypeScale,
+} from "../src";
 import "../src/styles.css";
 import "./gallery.css";
 
@@ -102,6 +112,18 @@ function Gallery() {
 
       <Section title="Footer">
         <Footer />
+      </Section>
+
+      <Section title="ColorPalette (Foundations)">
+        <ColorPalette />
+      </Section>
+
+      <Section title="TypeScale (Foundations)">
+        <TypeScale />
+      </Section>
+
+      <Section title="Iconography (Foundations)">
+        <Iconography />
       </Section>
     </div>
   );
