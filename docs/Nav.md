@@ -2,7 +2,7 @@
 category: Navigation
 ---
 
-`Nav` is the sticky top navigation bar, with zero-padded index labels (`01 — index`, `02 — projects`, ...) and an active-link underline in signal orange. It's framework-agnostic: pass a `linkComponent` to wire it to a router (defaults to a plain `<a>`).
+`Nav` is the sticky top navigation bar, with zero-padded index labels (`01 — index`, `02 — projects`, ...) and an active-link underline in vintage grape. It's framework-agnostic: pass a `linkComponent` to wire it to a router (defaults to a plain `<a>`).
 
 ```tsx
 import { Nav } from "@portfolio/ui";

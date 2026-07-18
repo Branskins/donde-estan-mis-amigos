@@ -6,7 +6,7 @@
 import { ColorPalette, TypeScale, Iconography } from "@portfolio/ui";
 ```
 
-- `ColorPalette` — the full neutral ramp, primary (orange) and secondary (blue) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
+- `ColorPalette` — the full neutral ramp, primary (vintage grape) and secondary (sandy brown) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
 - `TypeScale` — display through small, plus the `// UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
 - `Iconography` — the working Lucide icon set (2px stroke, `currentColor`, outline only). Pull new icons from `lucide-react` at the same stroke width shown here rather than mixing icon styles.
 
@@ -40,12 +40,12 @@ This is not a Tailwind-style utility system and components take no `style`/theme
 
 For layout/glue markup you write yourself (page wrappers, grids — anything that isn't one of the components above), don't invent new colors, spacing, or type sizes. Use the same CSS custom properties the components use, directly:
 
-- Color: `var(--text-primary)`, `var(--text-secondary)`, `var(--text-muted)`, `var(--surface-page)`, `var(--surface-sunken)`, `var(--surface-inverse)`, `var(--border-default)`, `var(--border-strong)`, `var(--accent-primary)` (signal orange), `var(--accent-secondary)` (circuit blue).
+- Color: `var(--text-primary)`, `var(--text-secondary)`, `var(--text-muted)`, `var(--surface-page)`, `var(--surface-sunken)`, `var(--surface-inverse)`, `var(--border-default)`, `var(--border-strong)`, `var(--accent-primary)` (vintage grape), `var(--accent-secondary)` (sandy brown).
 - Spacing (4px scale): `var(--space-1)` through `var(--space-24)`.
 - Type: `var(--font-mono)`, `var(--fs-micro)` through `var(--fs-display)`, `var(--fw-regular)` through `var(--fw-bold)`, `var(--tracking-tight)`/`--tracking-wide`/`--tracking-widest`.
 - Radius/border: `var(--radius-none)`/`--radius-xs`/`--radius-sm` (sharp corners are the house style — never use a large radius except `--radius-full` for pill badges).
 
-Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix orange and blue in the same component at full strength). Zero-padded index numbers (`01`, `02`) and `// UPPERCASE` eyebrow labels are this brand's signature — `ProjectCard` and `Nav` both use them.
+Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix grape and sandy brown in the same component at full strength). Zero-padded index numbers (`01`, `02`) and `// UPPERCASE` eyebrow labels are this brand's signature — `ProjectCard` and `Nav` both use them.
 
 ## Where the truth lives
 

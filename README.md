@@ -50,7 +50,7 @@ import { Button, Badge, ProjectCard, Nav, Footer } from "@portfolio/ui";
 
 ## Visual foundations
 
-- **Palette:** high-contrast black/white base (`--black #0a0a0a`, `--white`, 11-step gray ramp) carries nearly all surface and text color. Two accents used sparingly: **signal orange** (`--accent-primary`, #ff4d00) for primary actions/focus, **circuit blue** (`--accent-secondary`, #0052ff) for links/secondary emphasis. Never both accents in the same component at full strength — pick one per context.
+- **Palette:** high-contrast black/white base (`--black #0a0a0a`, `--white`, 11-step gray ramp) carries nearly all surface and text color. Two accents used sparingly: **vintage grape** (`--accent-primary`, #90659a) for primary actions/focus, **sandy brown** (`--accent-secondary`, #f0780f) for links/secondary emphasis. Never both accents in the same component at full strength — pick one per context.
 - **Typography:** single family, JetBrains Mono, used for everything (headings, body, labels) — reinforces the technical identity rather than pairing with a humanist sans. Hierarchy comes from size/weight/tracking, not typeface switching. Tight tracking on large display type, wide/uppercase tracking on micro labels.
 - **Spacing:** 4px base scale (`--space-1` … `--space-24`). Generous whitespace; layouts should feel like well-formatted code, not cramped.
 - **Corners:** sharp by default. `--radius-none`/`--radius-xs` (0–2px) for cards and containers; `--radius-sm` (4px) is the practical max for interactive controls. Never fully rounded except `--radius-full` for true pills (tags/badges only).

@@ -15,12 +15,12 @@ const NEUTRALS: Array<{ label: string; bg: string; fg: string }> = [
 
 const PRIMARY = ["50", "100", "300", "500", "600", "700"].map((step) => ({
   label: step,
-  bg: `var(--orange-${step})`,
+  bg: `var(--grape-${step})`,
 }));
 
 const SECONDARY = ["50", "100", "300", "500", "600", "700"].map((step) => ({
   label: step,
-  bg: `var(--blue-${step})`,
+  bg: `var(--sandy-${step})`,
 }));
 
 const SEMANTIC = [
@@ -35,9 +35,9 @@ const SEMANTIC = [
 ];
 
 /**
- * The full color system — neutral ramp, primary (orange) and secondary (blue)
- * accents, and semantic surface/text/border aliases. The authoritative
- * reference for any color decision in this design system.
+ * The full color system — neutral ramp, primary (vintage grape) and secondary
+ * (sandy brown) accents, and semantic surface/text/border aliases. The
+ * authoritative reference for any color decision in this design system.
  */
 export function ColorPalette() {
   return (
@@ -58,7 +58,7 @@ export function ColorPalette() {
       </div>
 
       <div className="ds-palette__section">
-        <div className="ds-palette__label">Primary — orange</div>
+        <div className="ds-palette__label">Primary — vintage grape</div>
         <div className="ds-swatch-row">
           {PRIMARY.map((s) => (
             <div key={s.label} className="ds-swatch" style={{ background: s.bg }}>
@@ -69,7 +69,7 @@ export function ColorPalette() {
       </div>
 
       <div className="ds-palette__section">
-        <div className="ds-palette__label">Secondary — blue</div>
+        <div className="ds-palette__label">Secondary — sandy brown</div>
         <div className="ds-swatch-row">
           {SECONDARY.map((s) => (
             <div key={s.label} className="ds-swatch" style={{ background: s.bg }}>

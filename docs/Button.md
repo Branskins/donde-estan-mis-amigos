@@ -12,5 +12,5 @@ import { Button } from "@portfolio/ui";
 <Button variant="ghost">Learn more</Button>
 ```
 
-- `variant`: `"primary"` (solid signal-orange fill, for the main action), `"secondary"` (outlined, black border), `"ghost"` (text-only, underlines on hover). Default `"primary"`.
+- `variant`: `"primary"` (solid vintage-grape fill, for the main action), `"secondary"` (outlined, black border), `"ghost"` (text-only, underlines on hover). Default `"primary"`.
 - Accepts all native `<button>` props (`onClick`, `disabled`, `type`, ...).

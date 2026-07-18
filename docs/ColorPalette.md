@@ -2,7 +2,7 @@
 category: Foundations
 ---
 
-`ColorPalette` is the full color system — neutral ramp, primary (orange) and secondary (blue) accents, and semantic surface/text/border aliases. **This is the authoritative reference for any color decision** in this design system — every color used anywhere else traces back to one of these tokens.
+`ColorPalette` is the full color system — neutral ramp, primary (vintage grape) and secondary (sandy brown) accents, and semantic surface/text/border aliases. **This is the authoritative reference for any color decision** in this design system — every color used anywhere else traces back to one of these tokens.
 
 ```tsx
 import { ColorPalette } from "@portfolio/ui";
