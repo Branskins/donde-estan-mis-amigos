@@ -6,13 +6,13 @@ A minimal, high-contrast, monospace-driven design system — component library +
 
 ## What's here
 
-- `src/` — component source: `Button`, `LinkButton`, `Badge`, `ProjectCard`, `Nav`, `Footer`, plus the `ColorPalette`/`TypeScale`/`Iconography` foundation components. Plain CSS classes (`ds-*`, BEM-ish), no CSS Modules, no framework coupling — every component renders standalone.
+- `src/` — component source: `Button`, `LinkButton`, `Badge`, `ProjectCard`, `Nav`, `Footer`, plus the Foundations components (`ColorPalette`, `TypeScale`, `Iconography`, `SpacingScale`, `RadiusShadow`, `BrandMark`). Plain CSS classes (`ds-*`, BEM-ish), no CSS Modules, no framework coupling — every component renders standalone.
 - `tokens/` — `colors.css`, `typography.css`, `spacing.css`: the custom-property source of truth, imported by `src/styles.css`.
 - `docs/` — one usage doc per component (props, examples, category) — also what design-sync folds into each component's generated `.prompt.md`.
-- `guidelines/` — static specimen HTML pages with no component equivalent (`radius-shadow.html`, `spacing-scale.html`, `brand-overview.html`). Colors, type scale, and iconography used to live here too, until they became real components (see below).
+- `guidelines/` — empty. Every specimen that used to live here as static HTML (colors, type, spacing, radius/shadow, iconography, brand mark) is now a real Foundations component instead (see below) — nothing left with no component equivalent.
 - `gallery/` — local dev tool (Vite), renders every component together from live `src/` — not deployed, just a visual sanity check.
 - `.design-sync/` — config, notes, and the hand-authored conventions header for syncing this library into a [Claude Design](https://claude.ai/design) project (see below).
-- `styles.css` — legacy root stylesheet importing the three token files directly (used by `guidelines/*.html`'s relative links). `src/styles.css` is the real package entry.
+- `styles.css` — legacy root stylesheet importing the three token files directly. `src/styles.css` is the real package entry.
 
 ## Developing
 
@@ -63,7 +63,7 @@ import { Button, Badge, ProjectCard, Nav, Footer } from "@portfolio/ui";
 ## Iconography
 
 - **System:** [Lucide](https://lucide.dev), 2px stroke, `currentColor`, outline only — no fills/duotone/emoji. In components, via the `lucide-react` package (`ProjectCard`, `Footer`, `Iconography`).
-- No logo/brand mark asset was provided. `guidelines/brand-overview.html` shows a wordmark-only treatment (`YOUR_NAME_`) as a placeholder — swap in a real name/mark when available. Never draw a logo from scratch.
+- No logo/brand mark asset was provided. `BrandMark` renders a wordmark-only treatment (`YOUR_NAME_` placeholder, `name` prop to override) — never draw a logo from scratch.
 
 ## Components
 
@@ -77,8 +77,11 @@ import { Button, Badge, ProjectCard, Nav, Footer } from "@portfolio/ui";
 | `ColorPalette` | Foundation — renders the full neutral/primary/secondary/semantic color system. Authoritative reference for color decisions. |
 | `TypeScale` | Foundation — renders the full type scale plus the micro-label idiom. Authoritative reference for typography decisions. |
 | `Iconography` | Foundation — renders the working Lucide icon set. Authoritative reference for icon decisions. |
+| `SpacingScale` | Foundation — renders the 4px spacing scale (`space-1`–`space-16`). Authoritative reference for spacing decisions. |
+| `RadiusShadow` | Foundation — renders the radius/border/shadow reference. Authoritative reference for corner, border, and elevation decisions. |
+| `BrandMark` | Foundation — the wordmark treatment on the inverse (black) surface; the brand mark, since no logo asset exists. |
 
-`ColorPalette`, `TypeScale`, and `Iconography` take no props — they always render the live token/icon set, so they can't drift the way a written reference doc can. They replaced the static `guidelines/colors-*.html`, `guidelines/type-*.html`, and `guidelines/iconography.html` specimens (removed as redundant); `guidelines/` now only holds specimens with no component equivalent (`radius-shadow.html`, `spacing-scale.html`, `brand-overview.html`).
+The 6 Foundations components take no props (except `BrandMark`'s optional `name`) — they always render the live current token/icon set, so they can't drift the way a written reference doc can. They replaced every static specimen that used to live in `guidelines/` (now empty).
 
 See each component's `docs/<Name>.md` for props and usage examples.
 

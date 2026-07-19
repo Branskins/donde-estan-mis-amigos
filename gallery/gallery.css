@@ -49,3 +49,27 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-6);
 }
+
+.gallery-group {
+  margin-top: var(--space-24);
+  padding-top: var(--space-8);
+  border-top: var(--border-thick) solid var(--border-strong);
+}
+
+.gallery-group__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+.gallery-group__subtitle {
+  color: var(--text-secondary);
+  font-size: var(--fs-small);
+  margin: var(--space-2) 0 0;
+}
+
+.gallery-group .gallery-section:first-of-type {
+  margin-top: var(--space-8);
+  padding-top: 0;
+  border-top: none;
+}

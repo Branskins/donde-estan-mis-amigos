@@ -39,22 +39,26 @@
 
 None — render check and all 9 authored previews passed clean on the first post-fix pass.
 
-## Foundations components (ColorPalette, TypeScale, Iconography)
+## Foundations components (ColorPalette, TypeScale, Iconography, SpacingScale, RadiusShadow, BrandMark)
 
-- Added 2026-07-16 at the user's request, to make the `guidelines/colors-*.html`,
-  `guidelines/type-*.html`, and `guidelines/iconography.html` specimens available to the design
-  agent as real, live components (group `Foundations`) rather than only as static docs it never
-  reads. `docsDir` frontmatter (`category: Foundations`) drives the grouping.
-- All three take no props by design — deterministic, single-cell (`Default`) previews. Don't add
-  props just to give them a variant axis; they're meant to always show the live current token
-  set, not a curated subset.
-- The redundant static specimens (`colors-neutrals.html`, `colors-primary.html`,
-  `colors-semantic.html`, `type-scale.html`, `type-labels.html`, `iconography.html`) were
-  deleted 2026-07-16 once the components existed — no more dual-maintenance risk between a
-  hand-authored HTML snapshot and the live component.
-- `radius-shadow.html`, `spacing-scale.html`, and `brand-overview.html` were NOT turned into
-  components (out of scope of the original ask — colors/typography/icons only) and are still in
-  `guidelines/`. Candidates for the same treatment if asked.
+- Added in two passes (2026-07-16: ColorPalette/TypeScale/Iconography; 2026-07-18:
+  SpacingScale/RadiusShadow/BrandMark) at the user's request, to make every `guidelines/*.html`
+  specimen available to the design agent as a real, live component (group `Foundations`) rather
+  than only as a static doc it never reads. `docsDir` frontmatter (`category: Foundations`)
+  drives the grouping.
+- All six take no props by design, except `BrandMark`'s optional `name` — deterministic,
+  single-cell (`Default`) previews. Don't add props just to give them a variant axis; they're
+  meant to always show the live current token set, not a curated subset.
+- `guidelines/` is now completely empty — every original specimen (colors-neutrals,
+  colors-primary, colors-semantic, type-scale, type-labels, iconography, radius-shadow,
+  spacing-scale, brand-overview) has a component equivalent and was deleted once verified. No
+  more dual-maintenance risk between a hand-authored HTML snapshot and the live component. If
+  `guidelines/` ever gets new content, it means a NEW specimen was added there, not a gap in the
+  component set.
+- Also added a "Foundations" group divider in `gallery/main.tsx` (2026-07-18) separating the 6
+  reusable components from the 6 Foundations reference components — purely a local dev-tool
+  organization choice, unrelated to design-sync's own grouping (which comes from `docsDir`
+  frontmatter, not from the gallery).
 
 ## Re-sync log
 

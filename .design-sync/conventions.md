@@ -1,16 +1,19 @@
-## Foundations — read these before making any color, type, or icon decision
+## Foundations — read these before making any color, type, spacing, radius, icon, or brand decision
 
-`ColorPalette`, `TypeScale`, and `Iconography` are not layout components — they're the rendered, authoritative source for this system's colors, type scale, and icon set. Before picking a color, font size, or icon anywhere, render or read these rather than guessing:
+`ColorPalette`, `TypeScale`, `Iconography`, `SpacingScale`, `RadiusShadow`, and `BrandMark` are not layout components — they're the rendered, authoritative source for this system's colors, type scale, spacing, radius/shadow, icon set, and brand mark. Before picking a color, font size, spacing value, corner radius, icon, or logo treatment anywhere, render or read these rather than guessing:
 
 ```tsx
-import { ColorPalette, TypeScale, Iconography } from "@portfolio/ui";
+import { ColorPalette, TypeScale, Iconography, SpacingScale, RadiusShadow, BrandMark } from "@portfolio/ui";
 ```
 
 - `ColorPalette` — the full neutral ramp, primary (vintage grape) and secondary (sandy brown) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
 - `TypeScale` — display through small, plus the `// UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
 - `Iconography` — the working Lucide icon set (2px stroke, `currentColor`, outline only). Pull new icons from `lucide-react` at the same stroke width shown here rather than mixing icon styles.
+- `SpacingScale` — the 4px scale (`space-1`–`space-16`) that drives all layout rhythm.
+- `RadiusShadow` — sharp corners by default, hairline borders doing the structural work, shadows reserved for true elevation.
+- `BrandMark` — the wordmark treatment (no logo asset exists; never draw one). Takes an optional `name` prop, defaulting to the `"YOUR_NAME"` placeholder.
 
-All three take no props — they always render the current token/icon set live, so they can't drift out of date the way a written color/type reference can.
+All six take no props except `BrandMark`'s `name` — they always render the current token/icon set live, so they can't drift out of date the way a written reference doc can.
 
 ## Setup
 
@@ -37,6 +40,9 @@ This is not a Tailwind-style utility system and components take no `style`/theme
 | ColorPalette | `ds-palette`, `ds-palette__label`, `ds-swatch-row`, `ds-swatch`, `ds-token-grid`, `ds-token-cell`, `ds-token-chip`, `ds-token-name` |
 | TypeScale | `ds-typescale`, `ds-typescale__row`, `ds-typescale__tag`, `ds-typescale__labels`, `ds-label`, `ds-label--accent` |
 | Iconography | `ds-icons`, `ds-icons__grid`, `ds-icons__cell` |
+| SpacingScale | `ds-spacing`, `ds-spacing__row`, `ds-spacing__tag`, `ds-spacing__bar` |
+| RadiusShadow | `ds-radius`, `ds-radius__box` |
+| BrandMark | `ds-brandmark`, `ds-brandmark__wordmark`, `ds-brandmark__meta` |
 
 For layout/glue markup you write yourself (page wrappers, grids — anything that isn't one of the components above), don't invent new colors, spacing, or type sizes. Use the same CSS custom properties the components use, directly:
 

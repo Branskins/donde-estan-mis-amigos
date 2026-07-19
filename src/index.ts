@@ -17,3 +17,7 @@ export type { FooterProps } from "./footer";
 export { ColorPalette } from "./color-palette";
 export { TypeScale } from "./type-scale";
 export { Iconography } from "./iconography";
+export { BrandMark } from "./brand-mark";
+export type { BrandMarkProps } from "./brand-mark";
+export { SpacingScale } from "./spacing-scale";
+export { RadiusShadow } from "./radius-shadow";

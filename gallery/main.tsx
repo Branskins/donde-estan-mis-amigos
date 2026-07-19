@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
   Badge,
+  BrandMark,
   Button,
   ColorPalette,
   Footer,
@@ -9,6 +10,8 @@ import {
   LinkButton,
   Nav,
   ProjectCard,
+  RadiusShadow,
+  SpacingScale,
   TypeScale,
 } from "../src";
 import "../src/styles.css";
@@ -114,17 +117,38 @@ function Gallery() {
         <Footer />
       </Section>
 
-      <Section title="ColorPalette (Foundations)">
-        <ColorPalette />
-      </Section>
+      <div className="gallery-group">
+        <h2 className="gallery-group__title">Foundations</h2>
+        <p className="gallery-group__subtitle">
+          Not layout components — the rendered, authoritative source for this system's colors,
+          type, spacing, radius/shadow, icons, and brand mark. Check here before guessing a
+          value.
+        </p>
 
-      <Section title="TypeScale (Foundations)">
-        <TypeScale />
-      </Section>
+        <Section title="ColorPalette">
+          <ColorPalette />
+        </Section>
 
-      <Section title="Iconography (Foundations)">
-        <Iconography />
-      </Section>
+        <Section title="TypeScale">
+          <TypeScale />
+        </Section>
+
+        <Section title="Iconography">
+          <Iconography />
+        </Section>
+
+        <Section title="SpacingScale">
+          <SpacingScale />
+        </Section>
+
+        <Section title="RadiusShadow">
+          <RadiusShadow />
+        </Section>
+
+        <Section title="BrandMark">
+          <BrandMark />
+        </Section>
+      </div>
     </div>
   );
 }
