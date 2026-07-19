@@ -62,6 +62,15 @@ None — render check and all 9 authored previews passed clean on the first post
 
 ## Re-sync log
 
+- **2026-07-18 (routine re-sync):** Chromium (revision 1228, matching the pinned
+  `playwright-core@1.61.1`) is now cached at `%LOCALAPPDATA%\ms-playwright\` on this machine —
+  future syncs here skip the install prompt. All 12 components verified `unchanged` by
+  `sourceKeys` (identical since the last upload); render check 12/12 clean. The rebuilt
+  `styles.css` still triggered `styleChanged: true` against the remote anchor (likely the
+  "Update color palette" commit, 68aefba, landing after the last upload's anchor was cut) —
+  styling-only upload, zero component regrades needed, exactly as designed. `conventions.md`
+  re-validated against the fresh build (every class, token, and prop it names still resolves) —
+  no drift, left as-is.
 - **2026-07-16 (repo restructure re-sync):** after promoting `packages/ui/*` to the repo root,
   a re-sync correctly reported `verification.unchanged` for all 6 components (source content
   identical) but still triggered a canary spot-check (`render_churn`) because the rebuilt
@@ -76,9 +85,10 @@ None — render check and all 9 authored previews passed clean on the first post
 
 ## Re-sync risks
 
-- If `packages/ui/src` changes, you must run `npm run build -w @portfolio/ui` yourself before
+- If `src/` changes, you must run `npm run build` yourself (no workspace flag needed now that
+  the package lives at the repo root — see "Repo layout changed 2026-07-16" above) before
   re-running the converter — there's no `buildCmd` wired up to do this automatically (two
-  separate build steps: the workspace package, then the DS converter).
+  separate build steps: the package build, then the DS converter).
 - JetBrains Mono is loaded via a remote Google Fonts `@import` (`[FONT_REMOTE]`, non-blocking) —
   not bundled. If Google Fonts is ever swapped for a self-hosted font, this will need
   `cfg.extraFonts` wired up and will start firing `[FONT_MISSING]` instead.
