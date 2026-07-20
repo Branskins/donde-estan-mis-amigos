@@ -46,7 +46,7 @@ import { Button, Badge, ProjectCard, Nav, Footer } from "@portfolio/ui";
 - **Person:** first person for bio/about ("I build…"), direct address for CTAs ("Get in touch").
 - **Punctuation motifs:** double-slash `//` comment prefix for section labels, underscore `_` as a personal signature glyph, en dash for meta separators (`Developer — Portfolio v1.0`).
 - **Emoji:** none. Technical/precise tone reads better without them.
-- **Numbers:** zero-padded index numbers for lists (`01`, `02`, `03`) — reinforces the technical, systems feel. `Nav` and `ProjectCard` both use this.
+- **Numbers:** zero-padded index numbers (`01`, `02`, `03`) are used as data identifiers for list ordering/keys, but are no longer rendered in `Nav` or `ProjectCard`.
 
 ## Visual foundations
 

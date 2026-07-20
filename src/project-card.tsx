@@ -10,13 +10,10 @@ export type Project = {
   liveHref?: string;
 };
 
-/** Project showcase card — index, title, description, tag chips, and repo/live links. */
+/** Project showcase card — title, description, tag chips, and repo/live links. */
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="ds-card">
-      <div className="ds-card__head">
-        <span className="ds-card__index">{project.index}</span>
-      </div>
       <h3 className="ds-card__title">{project.title}</h3>
       <p className="ds-card__desc">{project.description}</p>
       <div className="ds-card__tags">

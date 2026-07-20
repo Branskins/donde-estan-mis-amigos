@@ -2,7 +2,7 @@
 category: Navigation
 ---
 
-`Nav` is the sticky top navigation bar, with zero-padded index labels (`01 — index`, `02 — projects`, ...) and an active-link underline in vintage grape. It's framework-agnostic: pass a `linkComponent` to wire it to a router (defaults to a plain `<a>`).
+`Nav` is the sticky top navigation bar, with an active-link underline in vintage grape. It's framework-agnostic: pass a `linkComponent` to wire it to a router (defaults to a plain `<a>`).
 
 ```tsx
 import { Nav } from "@portfolio/ui";
@@ -20,6 +20,6 @@ import { Nav } from "@portfolio/ui";
 ```
 
 - `brand`: rendered at the left, linked to `/`.
-- `items`: ordered nav entries, each with a zero-padded `index`.
+- `items`: ordered nav entries, each with a zero-padded `index` (kept for ordering/keys but not rendered).
 - `activeHref`: matched against each item's `href` to underline the current page.
 - `linkComponent`: optional custom link renderer `({href, className, children}) => ReactNode` — pass your router's Link (e.g. Next.js `next/link`) for client-side navigation; defaults to a plain anchor.

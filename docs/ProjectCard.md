@@ -2,7 +2,7 @@
 category: Content
 ---
 
-`ProjectCard` is the project showcase card — a zero-padded index, title, one-line description, tag chips, and optional repo/live links.
+`ProjectCard` is the project showcase card — title, one-line description, tag chips, and optional repo/live links.
 
 ```tsx
 import { ProjectCard } from "@portfolio/ui";
@@ -19,6 +19,6 @@ import { ProjectCard } from "@portfolio/ui";
 />
 ```
 
-- `project.index`: zero-padded string (`"01"`, `"02"`, ...) shown above the title.
+- `project.index`: zero-padded string identifier (`"01"`, `"02"`, ...); kept for ordering/keys but not rendered.
 - `project.tags`: rendered as `Badge` chips.
 - `repoHref` / `liveHref`: optional — omit either to hide that link.

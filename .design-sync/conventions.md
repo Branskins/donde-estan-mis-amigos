@@ -34,8 +34,8 @@ This is not a Tailwind-style utility system and components take no `style`/theme
 |---|---|
 | Button / LinkButton | `ds-btn`, `ds-btn--primary`, `ds-btn--secondary`, `ds-btn--ghost` |
 | Badge | `ds-badge` |
-| ProjectCard | `ds-card`, `ds-card__head`, `ds-card__index`, `ds-card__title`, `ds-card__desc`, `ds-card__tags`, `ds-card__links`, `ds-card__link` |
-| Nav | `ds-nav`, `ds-nav__inner`, `ds-nav__mark`, `ds-nav__links`, `ds-nav__link`, `ds-nav__link--active`, `ds-nav__index` |
+| ProjectCard | `ds-card`, `ds-card__title`, `ds-card__desc`, `ds-card__tags`, `ds-card__links`, `ds-card__link` |
+| Nav | `ds-nav`, `ds-nav__inner`, `ds-nav__mark`, `ds-nav__links`, `ds-nav__link`, `ds-nav__link--active` |
 | Footer | `ds-footer`, `ds-footer__inner`, `ds-footer__meta`, `ds-footer__links`, `ds-footer__link` |
 | ColorPalette | `ds-palette`, `ds-palette__label`, `ds-swatch-row`, `ds-swatch`, `ds-token-grid`, `ds-token-cell`, `ds-token-chip`, `ds-token-name` |
 | TypeScale | `ds-typescale`, `ds-typescale__row`, `ds-typescale__tag`, `ds-typescale__labels`, `ds-label`, `ds-label--accent` |
@@ -51,7 +51,7 @@ For layout/glue markup you write yourself (page wrappers, grids — anything tha
 - Type: `var(--font-mono)`, `var(--fs-micro)` through `var(--fs-display)`, `var(--fw-regular)` through `var(--fw-bold)`, `var(--tracking-tight)`/`--tracking-wide`/`--tracking-widest`.
 - Radius/border: `var(--radius-none)`/`--radius-xs`/`--radius-sm` (sharp corners are the house style — never use a large radius except `--radius-full` for pill badges).
 
-Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix grape and sandy brown in the same component at full strength). Zero-padded index numbers (`01`, `02`) and `// UPPERCASE` eyebrow labels are this brand's signature — `ProjectCard` and `Nav` both use them.
+Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix grape and sandy brown in the same component at full strength). `// UPPERCASE` eyebrow labels are this brand's signature. `ProjectCard` and `Nav` no longer render index numbers.
 
 ## Where the truth lives
 

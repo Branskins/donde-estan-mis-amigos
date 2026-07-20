@@ -30,7 +30,7 @@ export type NavProps = {
   linkComponent?: ComponentType<NavLinkProps>;
 };
 
-/** Sticky top navigation with zero-padded index labels (01 — index, 02 — projects, ...). */
+/** Sticky top navigation with an active-link underline. */
 export function Nav({ brand, items, activeHref, linkComponent }: NavProps) {
   const Link = linkComponent ?? DefaultNavLink;
 
@@ -51,7 +51,6 @@ export function Nav({ brand, items, activeHref, linkComponent }: NavProps) {
                     : "ds-nav__link"
                 }
               >
-                <span className="ds-nav__index">{item.index}</span>
                 {item.label}
               </Link>
             </li>
