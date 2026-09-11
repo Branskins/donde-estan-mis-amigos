@@ -62,6 +62,17 @@ None — render check and all 9 authored previews passed clean on the first post
 
 ## Re-sync log
 
+- **2026-07-19 (routine re-sync):** Source change was removing the rendered index label from `Nav`
+  and `ProjectCard` (the `<span>` markup only — `NavProps`/`Project` types unchanged). The
+  anchor's `renderHash`/`sourceKey` for both came back identical to the prior upload despite the
+  visual change, because those hashes key off the public prop-shape and the authored preview
+  `.tsx`, not a component's internal JSX — so no re-grade was triggered, which is correct (the
+  authored preview compositions are still valid; only the shipped component markup changed).
+  `package-validate.mjs`'s render check still re-screenshotted both and confirmed clean (12/12,
+  no `bad`/`thin`). Only `Nav`/`ProjectCard` (`.jsx`/`.d.ts`/`.prompt.md` content) plus bundle +
+  styling re-uploaded — everything else carried forward untouched. Confirms the verification vs.
+  upload partition (base SKILL.md §2 step 4) working as designed: a render-affecting source edit
+  with an unchanged public contract still ships without a wasted regrade cycle.
 - **2026-07-18 (routine re-sync):** Chromium (revision 1228, matching the pinned
   `playwright-core@1.61.1`) is now cached at `%LOCALAPPDATA%\ms-playwright\` on this machine —
   future syncs here skip the install prompt. All 12 components verified `unchanged` by
