@@ -41,82 +41,6 @@ function Gallery() {
         Local visual sanity check — every component, rendered together. Not deployed anywhere.
       </p>
 
-      <Section title="Button">
-        <div className="gallery-row">
-          <Button variant="primary">Save changes</Button>
-          <Button variant="secondary">Cancel</Button>
-          <Button variant="ghost">Learn more</Button>
-          <Button variant="primary" disabled>
-            Processing…
-          </Button>
-        </div>
-      </Section>
-
-      <Section title="LinkButton">
-        <div className="gallery-row">
-          <LinkButton href="#" variant="primary">
-            View projects
-          </LinkButton>
-          <LinkButton href="#" variant="secondary">
-            View CV
-          </LinkButton>
-          <LinkButton href="#" variant="ghost">
-            Read the blog
-          </LinkButton>
-        </div>
-      </Section>
-
-      <Section title="Badge">
-        <div className="gallery-row">
-          <Badge>typescript</Badge>
-          <Badge>next.js</Badge>
-          <Badge>node</Badge>
-          <Badge>postgres</Badge>
-        </div>
-      </Section>
-
-      <Section title="ProjectCard">
-        <div className="gallery-grid">
-          <ProjectCard
-            project={{
-              index: "01",
-              title: "Task Runner",
-              description:
-                "A lightweight CLI for running project scripts in parallel with live output.",
-              tags: ["typescript", "node"],
-              repoHref: "#",
-              liveHref: "#",
-            }}
-          />
-          <ProjectCard
-            project={{
-              index: "02",
-              title: "API Gateway",
-              description:
-                "Internal service mesh gateway with request routing and auth middleware.",
-              tags: ["go", "grpc"],
-              repoHref: "#",
-            }}
-          />
-        </div>
-      </Section>
-
-      <Section title="Nav">
-        <Nav
-          brand={
-            <>
-              YOUR_NAME<span>_</span>
-            </>
-          }
-          items={navItems}
-          activeHref="/projects"
-        />
-      </Section>
-
-      <Section title="Footer">
-        <Footer />
-      </Section>
-
       <div className="gallery-group">
         <h2 className="gallery-group__title">Foundations</h2>
         <p className="gallery-group__subtitle">
@@ -147,6 +71,86 @@ function Gallery() {
 
         <Section title="BrandMark">
           <BrandMark />
+        </Section>
+      </div>
+
+      <div className="gallery-group">
+        <h2 className="gallery-group__title">Components</h2>
+
+        <Section title="Button">
+          <div className="gallery-row">
+            <Button variant="primary">Save changes</Button>
+            <Button variant="secondary">Cancel</Button>
+            <Button variant="ghost">Learn more</Button>
+            <Button variant="primary" disabled>
+              Processing…
+            </Button>
+          </div>
+        </Section>
+
+        <Section title="LinkButton">
+          <div className="gallery-row">
+            <LinkButton href="#" variant="primary">
+              View projects
+            </LinkButton>
+            <LinkButton href="#" variant="secondary">
+              View CV
+            </LinkButton>
+            <LinkButton href="#" variant="ghost">
+              Read the blog
+            </LinkButton>
+          </div>
+        </Section>
+
+        <Section title="Badge">
+          <div className="gallery-row">
+            <Badge>typescript</Badge>
+            <Badge>next.js</Badge>
+            <Badge>node</Badge>
+            <Badge>postgres</Badge>
+          </div>
+        </Section>
+
+        <Section title="ProjectCard">
+          <div className="gallery-grid">
+            <ProjectCard
+              project={{
+                index: "01",
+                title: "Task Runner",
+                description:
+                  "A lightweight CLI for running project scripts in parallel with live output.",
+                tags: ["typescript", "node"],
+                repoHref: "#",
+                liveHref: "#",
+              }}
+            />
+            <ProjectCard
+              project={{
+                index: "02",
+                title: "API Gateway",
+                description:
+                  "Internal service mesh gateway with request routing and auth middleware.",
+                tags: ["go", "grpc"],
+                repoHref: "#",
+              }}
+            />
+          </div>
+        </Section>
+
+        <Section title="Nav">
+          <Nav
+            brand={
+              <>
+                YOUR_NAME<span>_</span>
+              </>
+            }
+            items={navItems}
+            activeHref="/projects"
+          />
+        </Section>
+
+        <Section title="Footer">
+          <Footer />
         </Section>
       </div>
     </div>

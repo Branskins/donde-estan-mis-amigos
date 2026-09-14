@@ -315,29 +315,19 @@ Two border widths exist: `border-hairline` (1px) for all structural edges and `b
 
 Twelve components, plain CSS classes (`ds-*`, BEM-ish) — no CSS Modules, no framework coupling, no styled-components. Import `@portfolio/ui/styles.css` once and every component renders standalone. Per-component usage docs live in [docs/](docs/); [gallery/](gallery/) (`npm run gallery`) renders them all live from `src/`.
 
-### Buttons
-
-`Button` (native `<button>`) and `LinkButton` (`<a>`) share one class set across three variants. **Primary** is a grape fill with white text. **Secondary** is transparent with a black hairline border. **Ghost** drops horizontal padding and radius entirely and grows a bottom border on hover, so it reads as a text link with a hit target. Padding is asymmetric — `space-3` (12px) vertical, `space-5` (20px) horizontal — which the single `padding` token above can't express. Disabled drops to 50% opacity with `cursor: not-allowed`.
-
-### Badge
-
-The only pill in the system: uppercase `label-caps`, hairline border, no fill, `rounded-full`. Used for tags, statuses, and tech-stack chips. Takes children only — no props, no variants, no color-coding by category.
-
-### ProjectCard
-
-An `<article>` taking one `project` object (`index`, `title`, `description`, `tags[]`, optional `repoHref` / `liveHref`). Renders a `Badge` per tag and Lucide-iconed repo/live links whose row bottom-aligns via `margin-top: auto`. Hover promotes the border to black and adds `--shadow-sm`.
-
-### Nav
-
-`brand`, `items[]`, `activeHref`, `linkComponent`. The one composition seam in the library — pass a router's Link (e.g. `next/link`) and it renders through that; it defaults to a plain anchor. The active link gets a 2px grape bottom border.
-
-### Footer
-
-Inverse black surface with an optional `year`, a wide-tracked meta line, and three icon links.
-
 ### Foundations
 
 `ColorPalette`, `TypeScale`, `Iconography`, `SpacingScale`, `RadiusShadow`, and `BrandMark` are living specimens that render the current token set rather than a curated snapshot. They replaced the hand-authored `guidelines/*.html` files, which removed the dual-maintenance risk between a static snapshot and the real tokens. All take no props except `BrandMark`'s optional `name` — don't add props to give them a variant axis; they exist to show what the tokens actually are.
+
+### Components
+
+| Component | Element | Notes |
+|---|---|---|
+| `Button` / `LinkButton` | `<button>` / `<a>` | Three variants share one class set. **Primary** is a grape fill with white text. **Secondary** is transparent with a black hairline border. **Ghost** drops horizontal padding and radius entirely and grows a bottom border on hover, reading as a text link with a hit target. Padding is asymmetric — `space-3` (12px) vertical, `space-5` (20px) horizontal — which the single `padding` token above can't express. Disabled drops to 50% opacity with `cursor: not-allowed`. |
+| `Badge` | `<span>` | The only pill in the system: uppercase `label-caps`, hairline border, no fill, `rounded-full`. Used for tags, statuses, and tech-stack chips. Takes children only — no props, no variants, no color-coding by category. |
+| `ProjectCard` | `<article>` | Takes one `project` object (`index`, `title`, `description`, `tags[]`, optional `repoHref` / `liveHref`). Renders a `Badge` per tag and Lucide-iconed repo/live links whose row bottom-aligns via `margin-top: auto`. Hover promotes the border to black and adds `--shadow-sm`. |
+| `Nav` | `<nav>` | `brand`, `items[]`, `activeHref`, `linkComponent`. The one composition seam in the library — pass a router's Link (e.g. `next/link`) and it renders through that; it defaults to a plain anchor. The active link gets a 2px grape bottom border. |
+| `Footer` | `<footer>` | Inverse black surface with an optional `year`, a wide-tracked meta line, and three icon links. |
 
 ### Iconography and motion
 
