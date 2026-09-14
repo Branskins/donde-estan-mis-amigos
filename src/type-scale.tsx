@@ -19,8 +19,7 @@ const SCALE = [
 ];
 
 /**
- * The full type scale (display through small) plus the uppercase micro-label
- * idiom used for eyebrows and section tags. JetBrains Mono is the only
+ * The full type scale (display through small). JetBrains Mono is the only
  * family in this system — hierarchy comes from size/weight/tracking here,
  * never a second typeface.
  */
@@ -41,11 +40,6 @@ export function TypeScale() {
           </div>
         </div>
       ))}
-
-      <div className="ds-typescale__labels">
-        <div className="ds-label">Selected Work</div>
-        <div className="ds-label ds-label--accent">Now Building</div>
-      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { ColorPalette, TypeScale, Iconography, SpacingScale, RadiusShadow, Brand
 ```
 
 - `ColorPalette` — the full neutral ramp, primary (vintage grape) and secondary (sandy brown) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
-- `TypeScale` — display through small, plus the `UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
+- `TypeScale` — display through small. JetBrains Mono is the only family; never introduce a second typeface.
 - `Iconography` — the working Lucide icon set (2px stroke, `currentColor`, outline only). Pull new icons from `lucide-react` at the same stroke width shown here rather than mixing icon styles.
 - `SpacingScale` — the 4px scale (`space-1`–`space-16`) that drives all layout rhythm.
 - `RadiusShadow` — sharp corners by default, hairline borders doing the structural work, shadows reserved for true elevation.
@@ -38,7 +38,7 @@ This is not a Tailwind-style utility system and components take no `style`/theme
 | Nav | `ds-nav`, `ds-nav__inner`, `ds-nav__mark`, `ds-nav__links`, `ds-nav__link`, `ds-nav__link--active` |
 | Footer | `ds-footer`, `ds-footer__inner`, `ds-footer__meta`, `ds-footer__links`, `ds-footer__link` |
 | ColorPalette | `ds-palette`, `ds-palette__label`, `ds-swatch-row`, `ds-swatch`, `ds-token-grid`, `ds-token-cell`, `ds-token-chip`, `ds-token-name` |
-| TypeScale | `ds-typescale`, `ds-typescale__row`, `ds-typescale__tag`, `ds-typescale__labels`, `ds-label`, `ds-label--accent` |
+| TypeScale | `ds-typescale`, `ds-typescale__row`, `ds-typescale__tag` |
 | Iconography | `ds-icons`, `ds-icons__grid`, `ds-icons__cell` |
 | SpacingScale | `ds-spacing`, `ds-spacing__row`, `ds-spacing__tag`, `ds-spacing__bar` |
 | RadiusShadow | `ds-radius`, `ds-radius__box` |
