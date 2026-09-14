@@ -11,6 +11,7 @@ A minimal, high-contrast, monospace-driven design system — component library +
 - `docs/` — one usage doc per component (props, examples, category) — also what design-sync folds into each component's generated `.prompt.md`.
 - `guidelines/` — empty. Every specimen that used to live here as static HTML (colors, type, spacing, radius/shadow, iconography, brand mark) is now a real Foundations component instead (see below) — nothing left with no component equivalent.
 - `gallery/` — local dev tool (Vite), renders every component together from live `src/` — not deployed, just a visual sanity check.
+- `canvas/` — local dev tool (Vite), a blank scratch page from live `src/` — not deployed, for trying specific components, drafts, and new ideas before they land in `gallery/` or `src/`.
 - `.design-sync/` — config, notes, and the hand-authored conventions header for syncing this library into a [Claude Design](https://claude.ai/design) project (see below).
 - `styles.css` — legacy root stylesheet importing the three token files directly. `src/styles.css` is the real package entry.
 
@@ -20,6 +21,7 @@ A minimal, high-contrast, monospace-driven design system — component library +
 npm install
 npm run build      # compile src/ -> dist/ (ESM + .d.ts + CSS), via tsup
 npm run gallery     # Vite dev server, every component rendered live from src/ (no rebuild needed)
+npm run canvas      # Vite dev server, blank scratch page for testing drafts and new ideas
 ```
 
 ## Using this library elsewhere

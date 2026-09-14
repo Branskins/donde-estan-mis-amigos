@@ -18,7 +18,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "prepare": "tsup",
-    "gallery": "vite"
+    "gallery": "vite",
+    "canvas": "vite --config vite.canvas.config.ts"
   },
   "peerDependencies": {
     "react": "^19.0.0",
