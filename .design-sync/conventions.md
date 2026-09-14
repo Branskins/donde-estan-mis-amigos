@@ -7,7 +7,7 @@ import { ColorPalette, TypeScale, Iconography, SpacingScale, RadiusShadow, Brand
 ```
 
 - `ColorPalette` — the full neutral ramp, primary (vintage grape) and secondary (sandy brown) accent ramps, and every semantic token (`surface-*`, `text-*`, `border-*`, `accent-*`). Any color used anywhere in this system traces back to one of these.
-- `TypeScale` — display through small, plus the `// UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
+- `TypeScale` — display through small, plus the `UPPERCASE` micro-label idiom. JetBrains Mono is the only family; never introduce a second typeface.
 - `Iconography` — the working Lucide icon set (2px stroke, `currentColor`, outline only). Pull new icons from `lucide-react` at the same stroke width shown here rather than mixing icon styles.
 - `SpacingScale` — the 4px scale (`space-1`–`space-16`) that drives all layout rhythm.
 - `RadiusShadow` — sharp corners by default, hairline borders doing the structural work, shadows reserved for true elevation.
@@ -51,7 +51,7 @@ For layout/glue markup you write yourself (page wrappers, grids — anything tha
 - Type: `var(--font-mono)`, `var(--fs-micro)` through `var(--fs-display)`, `var(--fw-regular)` through `var(--fw-bold)`, `var(--tracking-tight)`/`--tracking-wide`/`--tracking-widest`.
 - Radius/border: `var(--radius-none)`/`--radius-xs`/`--radius-sm` (sharp corners are the house style — never use a large radius except `--radius-full` for pill badges).
 
-Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix grape and sandy brown in the same component at full strength). `// UPPERCASE` eyebrow labels are this brand's signature. `ProjectCard` and `Nav` no longer render index numbers.
+Visual language: high-contrast black/white base, JetBrains Mono everywhere (headings, body, labels — no second typeface), sharp corners, hairline borders doing most of the structural work (not shadows), one accent per context (never mix grape and sandy brown in the same component at full strength). `UPPERCASE` eyebrow labels are this brand's signature. `ProjectCard` and `Nav` no longer render index numbers.
 
 ## Where the truth lives
 

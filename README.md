@@ -42,9 +42,9 @@ import { Button, Badge, ProjectCard, Nav, Footer } from "@portfolio/ui";
 ## Content fundamentals
 
 - **Voice:** direct, low-ego, technical. Short sentences. Write like commit messages or a terminal prompt, not marketing copy.
-- **Casing:** sentence case for body copy; UPPERCASE with wide letter-spacing for eyebrows/labels/nav (e.g. `// SELECTED WORK`).
+- **Casing:** sentence case for body copy; UPPERCASE with wide letter-spacing for eyebrows/labels/nav (e.g. `SELECTED WORK`).
 - **Person:** first person for bio/about ("I build…"), direct address for CTAs ("Get in touch").
-- **Punctuation motifs:** double-slash `//` comment prefix for section labels, underscore `_` as a personal signature glyph, en dash for meta separators (`Developer — Portfolio v1.0`).
+- **Punctuation motifs:** underscore `_` as a personal signature glyph, en dash for meta separators (`Developer — Portfolio v1.0`).
 - **Emoji:** none. Technical/precise tone reads better without them.
 - **Numbers:** zero-padded index numbers (`01`, `02`, `03`) are used as data identifiers for list ordering/keys, but are no longer rendered in `Nav` or `ProjectCard`.
 

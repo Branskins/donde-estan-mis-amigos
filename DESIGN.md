@@ -243,7 +243,7 @@ This is the design system for a developer's personal portfolio (home, projects, 
 
 The personality is **technical, low-ego, precise**. The reference feeling is well-formatted source code or an engineering drawing: everything monospaced, aligned to a strict grid, structured with hairline rules rather than boxes and fills. It should read as competent rather than expressive; the work in the cards is meant to be the interesting thing on screen, not the chrome around it. Spacious over dense — generous whitespace is the main luxury signal, since there are no gradients, illustrations, or photography to carry mood.
 
-Voice follows the same rule: short declarative sentences, sentence case for prose, UPPERCASE with wide tracking for labels, no emoji. Punctuation motifs are borrowed from code — `//` prefixes section labels, `_` is the signature glyph, en dashes separate meta fields (`Developer — Portfolio v1.0 — 2026`).
+Voice follows the same rule: short declarative sentences, sentence case for prose, UPPERCASE with wide tracking for labels, no emoji. Punctuation motifs are borrowed from code — `_` is the signature glyph, en dashes separate meta fields (`Developer — Portfolio v1.0 — 2026`).
 
 When a rule isn't specified here, choose the flatter, quieter, more structural option.
 

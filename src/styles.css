@@ -334,10 +334,6 @@
   font-weight: var(--fw-medium);
 }
 
-.ds-label::before {
-  content: "// ";
-}
-
 .ds-label--accent {
   color: var(--accent-primary);
   font-weight: var(--fw-semibold);
@@ -393,10 +389,6 @@
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--gray-400);
-}
-
-.ds-brandmark__meta::before {
-  content: "// ";
 }
 
 /* Foundations: SpacingScale */
