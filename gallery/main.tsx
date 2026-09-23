@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { ArrowUpRight, FolderGit2 } from "lucide-react";
 import {
   Badge,
   BrandMark,
@@ -15,6 +16,7 @@ import {
   TypeScale,
 } from "../src";
 import "../src/styles.css";
+import "../drafts/project-card-dark.css";
 import "./gallery.css";
 
 const navItems = [
@@ -151,6 +153,42 @@ function Gallery() {
 
         <Section title="Footer">
           <Footer />
+        </Section>
+      </div>
+
+      <div className="gallery-group">
+        <h2 className="gallery-group__title">Drafts</h2>
+        <p className="gallery-group__subtitle">
+          Exploratory work-in-progress, not shipped from <code>src/</code>. Kept here for
+          visibility while still a concept — see <code>canvas/</code> for the live sandbox.
+        </p>
+
+        <Section title="ProjectCard — dark, hover-extend links">
+          <article className="ds-card ds-card--dark ds-card--links-slide">
+            <h3 className="ds-card__title">Donde Estan Mis Amigos</h3>
+            <p className="ds-card__desc">
+              Real-time map for finding friends nearby, built with a focus on fast location
+              updates and a minimal, distraction-free UI.
+            </p>
+            <div className="ds-card__tags">
+              {["react", "mapbox", "websockets"].map((tag) => (
+                <Badge key={tag}>{tag}</Badge>
+              ))}
+            </div>
+
+            <div className="ds-card__extend ds-card__extend--bleed">
+              <div className="ds-card__extend-panel ds-card__extend-panel--bleed">
+                <a href="#" className="ds-card__reveal-link">
+                  <FolderGit2 size={16} strokeWidth={2} />
+                  repo
+                </a>
+                <a href="#" className="ds-card__reveal-link">
+                  <ArrowUpRight size={16} strokeWidth={2} />
+                  live
+                </a>
+              </div>
+            </div>
+          </article>
         </Section>
       </div>
     </div>
