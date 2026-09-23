@@ -1,0 +1,93 @@
+/* Draft: dark ProjectCard variant, hover-extend links.
+   Not part of src/ — shared by canvas/ and gallery/ while this stays
+   a concept. See gallery "Drafts" section. */
+
+.ds-card--dark {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-inverse);
+  border-color: var(--border-inverse);
+}
+
+.ds-card--dark:hover {
+  border-color: var(--gray-500);
+}
+
+.ds-card--dark .ds-card__title,
+.ds-card--dark .ds-card__link {
+  color: var(--text-inverse);
+}
+
+.ds-card--dark .ds-card__desc {
+  color: var(--gray-400);
+}
+
+.ds-card--dark .ds-card__link:hover {
+  color: var(--accent-secondary);
+}
+
+.ds-card--dark .ds-badge {
+  color: var(--gray-300);
+  border-color: var(--border-inverse);
+}
+
+/* Repo/live links live only inside an extension panel that grows the
+   card open top-to-bottom on hover, instead of overlaying or
+   consuming existing content. */
+.ds-card__reveal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--black);
+  text-decoration: none;
+}
+
+.ds-card__reveal-link:hover {
+  text-decoration: underline;
+}
+
+.ds-card__extend {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-normal) var(--ease-standard);
+}
+
+.ds-card__extend-panel {
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--accent-secondary);
+  border-radius: var(--radius-xs);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  padding-top: 0;
+  padding-bottom: 0;
+  transition:
+    padding-top var(--duration-normal) var(--ease-standard),
+    padding-bottom var(--duration-normal) var(--ease-standard);
+}
+
+/* The panel bleeds to the card's own edges (full-bleed bar look).
+   The bleed margin lives on the grid wrapper, not the grid item —
+   putting it on the item fights the 0fr collapse used to hide the
+   panel until hover. */
+.ds-card__extend--bleed {
+  margin: 0 calc(var(--space-6) * -1) calc(var(--space-6) * -1);
+}
+
+.ds-card__extend-panel--bleed {
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+  border-radius: 0;
+}
+
+.ds-card--links-slide:hover .ds-card__extend {
+  grid-template-rows: 1fr;
+}
+
+.ds-card--links-slide:hover .ds-card__extend-panel {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
