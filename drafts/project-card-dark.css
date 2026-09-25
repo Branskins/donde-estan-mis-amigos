@@ -91,3 +91,45 @@
   padding-top: var(--space-4);
   padding-bottom: var(--space-4);
 }
+
+/* Concept: a color plate sits directly behind the card, exactly its
+   size, fully hidden at rest (same bounds as the card, so the opaque
+   card covers it completely). The card itself never moves — on hover
+   the plate slides out diagonally as one whole shape, links attached,
+   so the plate and its links show/hide together in a single motion. */
+.ds-card-stack {
+  position: relative;
+}
+
+.ds-card-stack__backing {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-secondary);
+  border-radius: var(--radius-xs);
+  transform: translate(0, 0);
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+/* Sized to the vertical reveal (space-10, matching the plate's own
+   translate below) and pinned to its bottom, so once the plate slides
+   out this band is exactly the strip left visible — the links center
+   inside it vertically while staying left-aligned. */
+.ds-card-stack__backing-links {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--space-10);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding-left: var(--space-4);
+}
+
+.ds-card-stack > .ds-card {
+  position: relative;
+}
+
+.ds-card-stack:hover .ds-card-stack__backing {
+  transform: translate(var(--space-10), var(--space-10));
+}

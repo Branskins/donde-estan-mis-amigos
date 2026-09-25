@@ -190,6 +190,35 @@ function Gallery() {
             </div>
           </article>
         </Section>
+
+        <Section title="ProjectCard — dark, hover-reveal plate">
+          <div className="ds-card-stack">
+            <div className="ds-card-stack__backing">
+              <div className="ds-card-stack__backing-links">
+                <a href="#" className="ds-card__reveal-link">
+                  <FolderGit2 size={16} strokeWidth={2} />
+                  repo
+                </a>
+                <a href="#" className="ds-card__reveal-link">
+                  <ArrowUpRight size={16} strokeWidth={2} />
+                  live
+                </a>
+              </div>
+            </div>
+            <article className="ds-card ds-card--dark">
+              <h3 className="ds-card__title">Donde Estan Mis Amigos</h3>
+              <p className="ds-card__desc">
+                Real-time map for finding friends nearby, built with a focus on fast location
+                updates and a minimal, distraction-free UI.
+              </p>
+              <div className="ds-card__tags">
+                {["react", "mapbox", "websockets"].map((tag) => (
+                  <Badge key={tag}>{tag}</Badge>
+                ))}
+              </div>
+            </article>
+          </div>
+        </Section>
       </div>
     </div>
   );
